@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/fast-track-logo.png.asset.json";
-import bannerAsset from "@/assets/coming-soon-banner.png.asset.json";
+import logoAsset from "@/assets/fast-track-logo.png";
+import bannerAsset from "@/assets/coming-soon-banner.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,26 +33,23 @@ function ComingSoonPage() {
     >
       {/* Logo */}
       <div className="animate-rise relative z-10 mb-8 px-6">
-        <img
-          src={logoAsset.url}
-          alt="Fast Track Shipping"
-          className="h-14 w-auto rounded-md shadow-lg sm:h-16"
-        />
+      <img
+  src="/fast-track-logo.png"
+  alt="Fast Track Shipping"
+  className="h-14 w-auto rounded-md shadow-lg sm:h-16"
+/>
       </div>
 
       {/* Coming soon banner */}
       <h1 className="sr-only">Fast Track Shipping — الموقع تحت الإنشاء، قريباً</h1>
-      <img
-        src={bannerAsset.url}
-        alt="Under construction — Coming soon — Stay tuned!"
-        className="animate-rise animation-delay-120 relative z-10 w-full max-w-2xl px-6"
-      />
+   <img
+  src="/coming-soon-banner.png"
+  alt="Under construction — Coming soon — Stay tuned!"
+  className="animate-rise animation-delay-120 relative z-10 w-full max-w-2xl px-6"
+/>
 
       {/* Arabic message */}
-      <p className="animate-fade animation-delay-360 mt-6 max-w-md px-6 text-center text-sm font-semibold leading-relaxed text-maintenance-ink-soft sm:text-base">
-        الموقع قيد الصيانة والتطوير حالياً. يتوجب الانتظار قليلاً — نعود إليكم
-        قريباً بتجربة شحن أسرع وأسهل.
-      </p>
+   
 
       {/* Footer contact */}
       <div className="animate-fade animation-delay-680 relative z-10 mt-8 pb-10 text-center">
