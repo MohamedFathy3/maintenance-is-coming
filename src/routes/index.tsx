@@ -52,12 +52,7 @@ function ComingSoonPage() {
    
 
       {/* Footer contact */}
-      <div className="animate-fade animation-delay-680 relative z-10 mt-8 pb-10 text-center">
-        <p className="text-xs text-maintenance-ink-faint">لأي استفسار راسلنا على</p>
-        <p className="mt-1.5 font-mono text-sm text-maintenance-ink-soft" dir="ltr">
-          info@fasttrackshipping.com
-        </p>
-      </div>
+      
     </main>
   );
 }
