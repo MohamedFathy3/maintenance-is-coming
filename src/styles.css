@@ -113,17 +113,17 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
-  /* Maintenance page palette (Luminous Nocturne) */
-  --maintenance-bg: oklch(0.154 0.055 283.367);
-  --maintenance-bg-mid: oklch(0.206 0.076 284.145);
-  --maintenance-bg-light: oklch(0.268 0.098 285.946);
-  --maintenance-ink: oklch(0.932 0.030 294.157);
-  --maintenance-ink-soft: oklch(0.785 0.075 291.490);
-  --maintenance-ink-faint: oklch(0.613 0.093 290.785);
-  --maintenance-accent: oklch(0.775 0.126 293.027);
-  --maintenance-accent-2: oklch(0.848 0.082 243.390);
-  --maintenance-glow: oklch(0.599 0.230 286.205);
-  --maintenance-glow-blue: oklch(0.705 0.158 252.754);
+  /* Maintenance page palette (Coming Soon banner) */
+  --maintenance-bg: oklch(0.995 0 0);
+  --maintenance-bg-mid: oklch(0.975 0.004 106);
+  --maintenance-bg-light: oklch(0.96 0.02 96);
+  --maintenance-ink: oklch(0.24 0.06 258);
+  --maintenance-ink-soft: oklch(0.44 0.045 258);
+  --maintenance-ink-faint: oklch(0.62 0.03 258);
+  --maintenance-accent: oklch(0.86 0.18 92);
+  --maintenance-accent-2: oklch(0.55 0.22 27);
+  --maintenance-glow: oklch(0.9 0.16 95);
+  --maintenance-glow-blue: oklch(0.3 0.08 258);
 }
 
 .dark {
