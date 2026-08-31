@@ -59,6 +59,23 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Maintenance page tokens */
+  --color-maintenance-bg: var(--maintenance-bg);
+  --color-maintenance-bg-mid: var(--maintenance-bg-mid);
+  --color-maintenance-bg-light: var(--maintenance-bg-light);
+  --color-maintenance-ink: var(--maintenance-ink);
+  --color-maintenance-ink-soft: var(--maintenance-ink-soft);
+  --color-maintenance-ink-faint: var(--maintenance-ink-faint);
+  --color-maintenance-accent: var(--maintenance-accent);
+  --color-maintenance-accent-2: var(--maintenance-accent-2);
+  --color-maintenance-glow: var(--maintenance-glow);
+  --color-maintenance-glow-blue: var(--maintenance-glow-blue);
+
+  /* Typography */
+  --font-display: "Cairo", system-ui, sans-serif;
+  --font-body: "Cairo", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
 :root {
@@ -95,6 +112,18 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Maintenance page palette (Luminous Nocturne) */
+  --maintenance-bg: oklch(0.154 0.055 283.367);
+  --maintenance-bg-mid: oklch(0.206 0.076 284.145);
+  --maintenance-bg-light: oklch(0.268 0.098 285.946);
+  --maintenance-ink: oklch(0.932 0.030 294.157);
+  --maintenance-ink-soft: oklch(0.785 0.075 291.490);
+  --maintenance-ink-faint: oklch(0.613 0.093 290.785);
+  --maintenance-accent: oklch(0.775 0.126 293.027);
+  --maintenance-accent-2: oklch(0.848 0.082 243.390);
+  --maintenance-glow: oklch(0.599 0.230 286.205);
+  --maintenance-glow-blue: oklch(0.705 0.158 252.754);
 }
 
 .dark {
@@ -141,4 +170,113 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+/* Maintenance page animations */
+@keyframes risein {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes ping-soft {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@utility animate-rise {
+  animation: risein 0.7s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@utility animate-fade {
+  animation: fadein 1s ease both;
+}
+
+@utility animate-pulse-soft {
+  animation: pulse-soft 2.6s ease-in-out infinite;
+}
+
+@utility animate-breathe {
+  animation: breathe 7s ease-in-out infinite;
+}
+
+@utility animate-ping-soft {
+  animation: ping-soft 2.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@utility animate-sweep {
+  animation: sweep 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@utility animation-delay-120 {
+  animation-delay: 120ms;
+}
+
+@utility animation-delay-240 {
+  animation-delay: 240ms;
+}
+
+@utility animation-delay-360 {
+  animation-delay: 360ms;
+}
+
+@utility animation-delay-520 {
+  animation-delay: 520ms;
+}
+
+@utility animation-delay-680 {
+  animation-delay: 680ms;
 }
